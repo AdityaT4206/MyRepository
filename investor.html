@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investors - Shravak Ventures</title>
+
+    <!-- Start Include All CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="assets/css/animate.css"/>
+    <link rel="stylesheet" href="assets/css/themewar-font.css"/>
+    <link rel="stylesheet" href="assets/css/quera-icon.css"/>
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/lightcase.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/settings.css">
+    <link rel="stylesheet" href="assets/css/preset.css"/>
+    <link rel="stylesheet" href="assets/css/ignore_for_wp.css"/>
+    <link rel="stylesheet" href="assets/css/theme.css"/>
+    <link rel="stylesheet" href="assets/css/responsive.css"/>
+    <!-- End Include All CSS -->
+
+    <link rel="icon" type="image/png" href="assets/images/shravak.png">
+
+    <style>
+    
+    
+    .copyText a{
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline !important;
+    color: inherit; /* or add your preferred color */
+    text-decoration: none;
+}
+
+.copyText a:hover{
+    color: #c9a14a; /* optional hover color */
+}
+        /* General Page Layout */
+        .investor-page {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        /* Testimonial Section */
+        .testimonial-section {
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+        }
+        .testimonial-section h2 {
+            color: #c08a38;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        .avatar-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.4s ease;
+        }
+        .avatar img { width: 100%; height: 100%; object-fit: cover; }
+        .avatar.active { border: 4px solid #c08a38; transform: scale(1.2); }
+        .flag { width: 50px; height: 30px; margin: 20px auto; border-radius: 5px; overflow: hidden; }
+        .flag img { width: 100%; height: 100%; object-fit: cover; }
+        .name { font-weight: bold; font-size: 24px; color: #333; margin-top: 10px; }
+        .text { font-size: 20px; color: #666; max-width: 700px; margin: 20px auto; line-height: 1.8; transition: opacity 0.4s ease; }
+
+        /* Card Carousel Section */
+        .carousel-section {
+            width: 100%;
+            padding: 80px 0;
+            background: transparent;
+        }
+        .carousel-section h2 {
+            color: #c08a38;
+            margin-bottom: 40px;
+            font-size: 28px;
+            text-align: center;
+        }
+        
+        .arc-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1200px;
+            overflow: hidden;
+        }
+        .card {
+            position: absolute;
+            width: 140px;
+            height: 220px;
+            border-radius: 12px;
+           
+            cursor: pointer;
+            transition: all 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            background: #fff;
+        }
+
+        /* FOOTER — dark grey bg (#888 → text must be light) */
+        .footer_02 { background: #1a1a1a !important; }
+
+        .footer_02 .aboutWidget h5 {
+            font-family: "Playfair Display", serif !important;
+            color: #f0f0f0 !important;
+            font-size: 1.4rem !important;
+            line-height: 1.4 !important;
+            font-weight: 700 !important;
+            margin-bottom: 20px !important;
+        }
+        .footer_02 .aboutWidget .phone {
+            color: #c08a38 !important;
+            font-family: "Inter", sans-serif !important;
+            font-size: 1.15rem !important;
+            font-weight: 600 !important;
+            margin-bottom: 12px !important;
+        }
+        .footer_02 .aboutWidget p {
+            color: #aaaaaa !important;
+            font-family: "Inter", sans-serif !important;
+            font-size: 0.88rem !important;
+            line-height: 1.7 !important;
+            margin-bottom: 12px !important;
+        }
+        .footer_02 .aboutWidget a {
+            color: #c08a38 !important;
+            font-family: "Inter", sans-serif !important;
+            font-size: 0.9rem !important;
+            border-color: #c08a38 !important;
+        }
+        .footer_02 .aboutWidget a:hover { color: #f0d080 !important; }
+
+        .footer_02 .widget_title {
+            font-family: "Playfair Display", serif !important;
+            color: #f0f0f0 !important;
+            font-size: 1.25rem !important;
+            font-weight: 700 !important;
+        }
+        .footer_02 .widget p {
+            color: #aaaaaa !important;
+            font-family: "Inter", sans-serif !important;
+            font-size: 0.88rem !important;
+        }
+        .footer_02 .SubsrcribeForm input[type="email"] {
+            background: #2a2a2a !important;
+            border-color: #3a3a3a !important;
+            color: #e0e0e0 !important;
+        }
+        .footer_02 .fdivider { border-color: #333 !important; }
+        .copyText {
+            font-family: "Inter", sans-serif !important;
+            color: #888 !important;
+            font-size: 0.85rem !important;
+        }
+        .footer_02 .copyMenu ul li,
+        .footer_02 .copyMenu ul li a {
+            font-family: "Inter", sans-serif !important;
+            color: #888 !important;
+            font-size: 0.85rem !important;
+        }
+        .footer_02 .copyMenu ul li a:hover { color: #c08a38 !important; }
+
+
+.arc-container::before,
+.arc-container::after {
+content: "";
+position: absolute;
+top: 0;
+width: 150px;
+height: 100%;
+z-index: 5;
+pointer-events: none;
+}
+
+.arc-container::before {
+left: 0;
+background: linear-gradient(to right, #f9f9f9, transparent);
+}
+
+.arc-container::after {
+right: 0;
+background: linear-gradient(to left, #f9f9f9, transparent);
+}
+
+        .card img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Positional Logic for the Arc */
+       .card[data-pos="0"] {
+transform: translateX(0) translateY(-30px) scale(1.3);
+z-index: 20;
+}
+
+/* RIGHT */
+.card[data-pos="1"] { transform: translateX(160px) translateY(20px) rotate(10deg); }
+.card[data-pos="2"] { transform: translateX(300px) translateY(60px) rotate(18deg); }
+.card[data-pos="3"] { transform: translateX(420px) translateY(110px) rotate(25deg); }
+.card[data-pos="4"] { transform: translateX(520px) translateY(160px) rotate(30deg); }
+.card[data-pos="5"] { transform: translateX(600px) translateY(210px) rotate(35deg); }
+.card[data-pos="6"] { transform: translateX(660px) translateY(260px) rotate(40deg); }
+.card[data-pos="7"] { transform: translateX(700px) translateY(310px) rotate(45deg); }
+
+/* LEFT */
+.card[data-pos="-1"] { transform: translateX(-160px) translateY(20px) rotate(-10deg); }
+.card[data-pos="-2"] { transform: translateX(-300px) translateY(60px) rotate(-18deg); }
+.card[data-pos="-3"] { transform: translateX(-420px) translateY(110px) rotate(-25deg); }
+.card[data-pos="-4"] { transform: translateX(-520px) translateY(160px) rotate(-30deg); }
+.card[data-pos="-5"] { transform: translateX(-600px) translateY(210px) rotate(-35deg); }
+.card[data-pos="-6"] { transform: translateX(-660px) translateY(260px) rotate(-40deg); }
+.card[data-pos="-7"] { transform: translateX(-700px) translateY(310px) rotate(-45deg); }
+
+        /* Navigation Scrolled State */
+        .header03.scrolled { background: #ffffff !important; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header03.scrolled .mainMenu ul li a { color: #000 !important; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .arc-container { height: 300px; }
+            .card { width: 100px; height: 140px; }
+            .card[data-pos="-1"] { transform: translateX(-100px) translateY(15px) rotate(-12deg); }
+            .card[data-pos="1"] { transform: translateX(100px) translateY(15px) rotate(12deg); }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header03 isSticky">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="navbar01">
+                    <div class="logo">
+                        <a href="index3.html"><img src="assets/images/shravak-logo.png" alt="Shravak Ventures"></a>
+                    </div>
+                    <nav class="mainMenu">
+                        <ul>
+                             <li class="current-menu-item">
+                                <a href="index3.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="about2.html">About</a>
+                            </li>
+                            <li>
+                                <a href="blog6.html">Blogs</a>
+                            </li>
+                            <li>
+                                <a href="investor.html">Investors</a>
+                            </li>
+                            <li>
+                                <a href="service2.html">Pages</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                       
+                    </nav>
+                    
+                    <a href="javascript:void(0);" class="menuToggler"><i class="twi-bars1"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="page_banner" style="background-image: url(assets/images/bg/banner.jpg); padding: 100px 0;">
+    <div class="container largeContainer">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="banner-title" style="color: white; font-size: 40px;">Our Investors</h2>
+            </div>
+            <div class="col-md-6 text-right">
+                <p class="breadcrumbs" style="color: white;"><a href="index3.html" style="color: white;"><i class="twi-home-alt1"></i>Home</a> <span>/</span> Investors</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="investor-page">
+    <div class="container">
+        <!-- Testimonial Slider -->
+        <div class="testimonial-section">
+            <h2>Customer Voices: Hear What They Say!</h2>
+            <div class="avatar-container" id="avatars"></div>
+            <div class="testimonial">
+                <div class="flag" id="flag"></div>
+                <div class="name" id="name"></div>
+                <div class="text" id="text"></div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Card Carousel Section -->
+        <div class="carousel-section">
+            <h2>Shravak Ventures Network</h2>
+            <div class="arc-container" id="cardContainer">
+                <!-- 12 Unique Images using IDs to prevent repeats -->
+                <div class="card"><img src="https://picsum.photos/id/101/300/400" alt="Inv 1"></div>
+                <div class="card"><img src="https://picsum.photos/id/102/300/400" alt="Inv 2"></div>
+                <div class="card"><img src="https://picsum.photos/id/103/300/400" alt="Inv 3"></div>
+                <div class="card"><img src="https://picsum.photos/id/104/300/400" alt="Inv 4"></div>
+                <div class="card"><img src="https://picsum.photos/id/106/300/400" alt="Inv 5"></div>
+                <div class="card"><img src="https://picsum.photos/id/107/300/400" alt="Inv 6"></div>
+                <div class="card"><img src="https://picsum.photos/id/108/300/400" alt="Inv 7"></div>
+                <div class="card"><img src="https://picsum.photos/id/109/300/400" alt="Inv 8"></div>
+                <div class="card"><img src="https://picsum.photos/id/110/300/400" alt="Inv 9"></div>
+                <div class="card"><img src="https://picsum.photos/id/111/300/400" alt="Inv 10"></div>
+                <div class="card"><img src="https://picsum.photos/id/112/300/400" alt="Inv 11"></div>
+                <div class="card"><img src="https://picsum.photos/id/113/300/400" alt="Inv 12"></div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+            <footer class="footer_02">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="aboutWidget">
+                            <h5>Do you have questions? <br>Call or visit us.</h5>
+                            <div class="phone"><i class="twi-phone"></i>+91 0000000000</div>
+                            <p>Unit No: 2, 4th Floor, Nilkanth Park,<br>Times Square Building, Andheri - Kurla Rd,<br>A-Wing, Gamdevi, Marol, Andheri (E),<br>Mumbai, Maharashtra 400059</p>
+                            <a href="mailto:contact@shravakventures.com">contact@shravakventures.com</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="widget gallery">
+                            <h3 class="widget_title mb28">Our Location</h3>
+                            <p>Find Us Here</p>
+                            <div class="galleryShots" style="width:100%;height:230px;overflow:hidden;border-radius:6px;">
+                               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.99186633619!2d72.88114007466599!3d19.10801275096782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9596e576117%3A0xaa52cf4083af702d!2sShravak%20Ventures!5e0!3m2!1sen!2sin!4v1778909333039!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4">
+                        <div class="widget">
+                            <h3 class="widget_title">Subscribe Our Newsletter</h3>
+                            <p>We Don’t Share Your Email Address</p>
+                            <div class="SubsrcribeForm">
+                                <form class="yikes-easy-mc-form" action="#" method="post">
+                                    <input type="email" name="EMAIL" placeholder="Email Address">
+                                    <button class="yikes-easy-mc-submit-button" type="submit">Subsrcribe</button>
+                                </form>
+                            </div>
+                            <div class="abSocial">
+                                <a href="javascript:void(0);"><i class="twi-facebook-f"></i></a>
+                                <a href="javascript:void(0);"><i class="twi-twitter"></i></a>
+                                <a href="javascript:void(0);"><i class="twi-dribbble"></i></a>
+                                <a href="javascript:void(0);"><i class="twi-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"><div class="col-lg-12"><div class="fdivider"></div></div></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="copyText">© 2026 Shravak Ventures. All Rights Reserved.
+                           Designed by <a href="https://deepshitech.com/">DeepshiTech Private Limited</a>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="copyMenu">
+                            <ul>
+                                <li><a href="javascript:void(0);">Privacy</a></li>
+                                <li><a href="javascript:void(0);">Terms</a></li>
+                                <li><a href="javascript:void(0);">Contact</a></li>
+                                <li><a href="javascript:void(0);">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Section -->
+
+<!-- JS Scripts -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<script>
+/** 1. TESTIMONIAL SLIDER LOGIC **/
+const avatarContainer = document.getElementById("avatars");
+const nameEl = document.getElementById("name");
+const textEl = document.getElementById("text");
+const flagEl = document.getElementById("flag");
+
+const testimonials = [
+    "Amazing service and support. Highly recommended!",
+    "Great experience working with this team.",
+    "Professional and very responsive!",
+    "They delivered beyond expectations.",
+    "Top-notch quality and execution.",
+    "Very satisfied with the results.",
+    "Excellent communication and service."
+];
+
+let users = [];
+let currentTestimonial = 0;
+
+fetch("https://randomuser.me/api/?results=12")
+    .then(res => res.json())
+    .then(data => {
+        users = data.results;
+        users.forEach((user, index) => {
+            const div = document.createElement("div");
+            div.classList.add("avatar");
+            div.innerHTML = `<img src="${user.picture.medium}">`;
+            div.onclick = () => { currentTestimonial = index; updateTestimonial(); };
+            avatarContainer.appendChild(div);
+        });
+        updateTestimonial();
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % users.length;
+            updateTestimonial();
+        }, 4000);
+    });
+
+function updateTestimonial() {
+    const avatars = document.querySelectorAll(".avatar");
+    if(!avatars.length) return;
+    avatars.forEach(a => a.classList.remove("active"));
+    avatars[currentTestimonial].classList.add("active");
+    const user = users[currentTestimonial];
+    nameEl.innerText = `${user.name.first} ${user.name.last}`;
+    flagEl.innerHTML = `<img src="https://flagcdn.com/w80/${user.nat.toLowerCase()}.png">`;
+    textEl.style.opacity = 0;
+    setTimeout(() => {
+        textEl.innerText = testimonials[currentTestimonial % testimonials.length];
+        textEl.style.opacity = 1;
+    }, 200);
+}
+
+/** 2. AUTO-PLAYING CARD CAROUSEL LOGIC (12 IMAGES) **/
+const cards = document.querySelectorAll(".card");
+let activeCardIndex = 0;
+let carouselTimer;
+
+function updateCarousel() {
+    const total = cards.length;
+    cards.forEach((card, i) => {
+        let pos = i - activeCardIndex;
+        // Circular math for 12 items
+        if (pos > total / 2) pos -= total;
+        if (pos < -total / 2) pos += total;
+
+        card.setAttribute("data-pos", pos);
+        
+        // Visibility control for smooth rotation
+        if (Math.abs(pos) > 7) {
+            card.style.opacity = "0";
+            card.style.visibility = "hidden";
+        } else {
+            card.style.opacity = "1";
+            card.style.visibility = "visible";
+        }
+    });
+}
+
+function startCarousel() {
+    carouselTimer = setInterval(() => {
+        activeCardIndex = (activeCardIndex + 1) % cards.length;
+        updateCarousel();
+    }, 3000); // Rotates every 3 seconds
+}
+
+cards.forEach((card, index) => {
+    card.addEventListener("click", () => {
+        activeCardIndex = index;
+        updateCarousel();
+        clearInterval(carouselTimer);
+        startCarousel(); // Reset timer on click
+    });
+});
+
+// Initialize Carousel
+updateCarousel();
+startCarousel();
+
+// 3. Navbar Scroll Effect
+window.addEventListener("scroll", () => {
+    const header = document.querySelector(".header03");
+    header.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
+
+</body>
+</html>
