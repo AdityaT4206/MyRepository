@@ -1,0 +1,2315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Shravak Ventures - ADitya</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- FONT -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+        <!-- Start Include All CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.css"/>
+        <link rel="stylesheet" href="assets/css/animate.css"/>
+        <link rel="stylesheet" href="assets/css/themewar-font.css"/>
+        <link rel="stylesheet" href="assets/css/quera-icon.css"/>
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <link rel="stylesheet" href="assets/css/lightcase.css">
+
+        <!-- Revolution Slider Setting CSS -->
+        <link rel="stylesheet" type="text/css" href="assets/css/settings.css">
+
+        <link rel="stylesheet" href="assets/css/preset.css"/>
+        <link rel="stylesheet" href="assets/css/ignore_for_wp.css"/>
+        <link rel="stylesheet" href="assets/css/theme.css"/>
+        <link rel="stylesheet" href="assets/css/responsive.css"/>
+        <!-- End Include All CSS -->
+
+        <!-- Popup Contact Form CSS -->
+        <style>
+        /* RESET */
+/* About Section Background */
+.aboutSection03 {
+    background: #f5f5f5; /* light grey */
+    padding: 80px 0;
+    position: relative;
+}
+.copyText a{
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline !important;
+    color: inherit; /* or add your preferred color */
+    text-decoration: none;
+}
+
+.copyText a:hover{
+    color: #cd9025; /* optional hover color */
+}
+/* Subtitle */
+.aboutSection03 .subTitle {
+    color: #cd9025; /* golden */
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Left Line */
+.aboutSection03 .bleft {
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background: #cd9025;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Main Title */
+.aboutSection03 .secTitle {
+    color: #cd9025;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+/* Description */
+.aboutSection03 .secDesc {
+    color: #cd9025;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+/* Choose List */
+.aboutSection03 .choose-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.aboutSection03 .choose-list li {
+    color: #cd9025;
+    font-size: 17px;
+    margin-bottom: 14px;
+    position: relative;
+    padding-left: 28px;
+}
+
+/* Golden Bullet */
+.aboutSection03 .choose-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #cd9025;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Fact Box */
+.aboutSection03 .fact_01 {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 25px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* Fact Number */
+.aboutSection03 .fact_01 h2 {
+    color: #cd9025;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Fact Text */
+.aboutSection03 .fact_01 p {
+    color: #666;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Image */
+.aboutSection03 .absThumb img {
+    width: 100%;
+    max-width: 550px;
+    display: block;
+    margin: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .aboutSection03 .secTitle {
+        font-size: 30px;
+    }
+
+    .aboutSection03 .fact_01 {
+        margin-bottom: 20px;
+    }
+
+    .aboutSection03 .absThumb {
+        margin-top: 40px;
+        text-align: center;
+    }
+}
+
+        .chat-popup {
+            position: fixed;
+            top: 0;
+            right: -520px;
+            width: 480px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #111111;
+            box-shadow: -6px 0 40px rgba(0,0,0,0.45);
+            opacity: 0;
+            visibility: hidden;
+            transition: right 0.45s cubic-bezier(0.4,0,0.2,1), opacity 0.35s ease;
+            z-index: 9999;
+            overflow-y: auto;
+        }
+
+        .chat-popup.active {
+            right: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* toggle tab on the left edge of the panel */
+        .panel-tab {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: #cd9025;
+            color: #fff;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            padding: 18px 10px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 6px 0 0 6px;
+            z-index: 9998;
+            transition: background 0.25s ease, right 0.45s cubic-bezier(0.4,0,0.2,1);
+            box-shadow: -3px 0 12px rgba(0,0,0,0.25);
+        }
+        .panel-tab:hover { background: #cd9025; }
+        .panel-tab.hidden { right: -60px; }
+
+        /* overlay */
+        .panel-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 9997;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s ease;
+        }
+        .panel-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* close button */
+        .close-popup {
+            position: sticky;
+            top: 16px;
+            float: right;
+            margin: 16px 20px 0 0;
+            font-size: 26px;
+            cursor: pointer;
+            color: #aaa;
+            z-index: 10001;
+            transition: color 0.25s, transform 0.3s;
+            line-height: 1;
+            background: rgba(17,17,17,0.85);
+            border: none;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .close-popup:hover { color: #cd9025; transform: rotate(90deg); }
+        @media (max-width: 767px) {
+            .close-popup {
+                top: 80px; /* clear the fixed header on mobile */
+            }
+        }
+
+        /* left branding area */
+        .left-content {
+            padding: 52px 36px 28px;
+            background: linear-gradient(160deg, #1a1a1a 0%, #0d0d0d 100%);
+            border-bottom: 1px solid rgba(192,138,56,0.25);
+            flex-shrink: 0;
+        }
+        .left-content h1 {
+            font-size: 26px;
+            line-height: 1.3;
+            color: #f0f0f0;
+            font-family: "Playfair Display", serif;
+            font-weight: 700;
+            margin: 0 0 14px;
+        }
+        .left-content strong { color: #cd9025; }
+        .desc {
+            font-size: 13.5px;
+            color: #aaaaaa;
+            line-height: 1.7;
+            margin-top: 8px;
+        }
+
+        /* right form area */
+        .right-content {
+            padding: 28px 36px 40px;
+            flex: 1;
+        }
+        .right-content h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 20px;
+            color: #f0f0f0;
+            font-weight: 600;
+            margin: 0 0 20px;
+        }
+        .right-content form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .right-content input,
+        .right-content textarea {
+            padding: 11px 14px;
+            border-radius: 6px;
+            border: 1px solid #2e2e2e;
+            background: #1a1a1a;
+            color: #e8e8e8;
+            font-size: 13.5px;
+            outline: none;
+            font-family: "Inter", sans-serif;
+            transition: border-color 0.25s, box-shadow 0.25s;
+        }
+        .right-content input::placeholder,
+        .right-content textarea::placeholder { color: #666; }
+        .right-content textarea { height: 75px; resize: none; }
+        .right-content input:focus,
+        .right-content textarea:focus {
+            border-color: #c08a38;
+            box-shadow: 0 0 0 3px rgba(192,138,56,0.15);
+        }
+        .right-content button {
+            padding: 12px;
+            border: none;
+            background: linear-gradient(135deg, #cd9025, #d4af37);
+            color: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            font-family: "Inter", sans-serif;
+            transition: opacity 0.25s;
+        }
+        .right-content button:hover { opacity: 0.88; }
+
+        @media (max-width: 520px) {
+            .chat-popup {
+                width: 100vw;
+                right: -100vw;
+                padding-top: 0; /* close button is sticky so it handles the spacing */
+            }
+            .left-content {
+                padding-top: 30px; /* reduce top padding since close button is sticky */
+            }
+        }
+
+        /* ============================================
+           TYPOGRAPHY — match the dark gold theme
+        ============================================ */
+        * { box-sizing: border-box; }
+
+        body, p, li, td, caption {
+            font-family: "Inter", "Roboto", sans-serif;
+            font-size: 15px;
+            line-height: 1.0;
+            color: #3a3a3a;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Playfair Display", serif;
+            font-weight: 400;
+            color: #1a1a1a;
+            line-height: 1.0;
+        }
+
+        /* Section titles */
+        .secTitle {
+            font-family: "Playfair Display", serif !important;
+            font-size: 18px ;
+            font-weight: 400 ;
+            color: #1a1a1a ;
+        }
+
+        .secDesc {
+            font-family: "Inter", sans-serif !important;
+            font-size: 14px !important;
+            color: #666 !important;
+            line-height: 1.0 !important;
+        }
+
+        /* Sub-labels above section titles */
+        .subTitle {
+            font-family: "Inter", sans-serif !important;
+            font-size: 12px !important;
+            font-weight: 400 !important;
+            letter-spacing: 0.12em !important;
+            text-transform: uppercase !important;
+            color: #c08a38 !important;
+        }
+
+        /* Nav links */
+        .mainMenu ul li a {
+            font-family: "Inter", sans-serif !important;
+            font-weight: 500 !important;
+            font-size: 14px !important;
+            letter-spacing: 0.02em !important;
+        }
+
+        /* Service cards — white bg */
+        .icon_box_09 h3, .icon_box_09 h3 a {
+            font-family: "Inter", sans-serif !important;
+            font-weight: 600 !important;
+            font-size: 1.05rem !important;
+            color: #1a1a1a !important;
+        }
+        .icon_box_09 p {
+            font-family: "Inter", sans-serif !important;
+            font-size: 0.9rem !important;
+            color: #74777c !important;
+            line-height: 1.7 !important;
+        }
+        /* When card is gold on hover — keep white text */
+        .icon_box_09:hover h3, .icon_box_09:hover h3 a,
+        .icon_box_09:hover p { color: #fff !important; }
+
+        /* Company section — white bg */
+        .comCon h2 { color: #1a1a1a; }
+        .comCon p {
+            font-family: "Inter", sans-serif;
+            font-size: 0.96rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Appointment section (dark bg) */
+        .appoinmentSection03 h3,
+        .appoinmentSection03 p,
+        .appoinmentSection03 label {
+            font-family: "Inter", sans-serif;
+        }
+
+        /* About section — white bg */
+        .aboutSection03 .choose-list li {
+            font-family: "Inter", sans-serif;
+            font-size: 0.93rem;
+            color: #444;
+        }
+        .fact_01 h2 {
+            font-family: "Playfair Display", serif;
+            color: #1a1a1a;
+        }
+        .fact_01 p {
+            font-family: "Inter", sans-serif;
+            color: #777;
+            font-size: 0.88rem;
+        }
+
+        /* Testimonial */
+        .testimonialContent p {
+            font-family: "Inter", sans-serif;
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+        .ts_author h5 {
+            font-family: "Playfair Display", serif;
+            color: #1a1a1a;
+        }
+        .ts_author span {
+            font-family: "Inter", sans-serif;
+            color: #cd9025;
+            font-size: 0.85rem;
+        }
+
+        /* Blog cards */
+        .blogSectiont03 h3 a {
+            font-family: "Inter", sans-serif;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        .blogSectiont03 p {
+            font-family: "Inter", sans-serif;
+            color: #666;
+            font-size: 0.92rem;
+        }
+
+        /* FOOTER — dark grey bg (#888 → text must be light) */
+        .footer_02 { background: #1a1a1a !important; }
+
+        .footer_02 .aboutWidget h5 {
+            font-family: "Playfair Display", serif !important;
+            color: #f0f0f0 !important;
+            font-size: 1.4rem !important;
+            line-height: 1.4 !important;
+            font-weight: 700 !important;
+            margin-bottom: 20px !important;
+        }
+        .footer_02 .aboutWidget .phone {
+            color: #cd9025 !important;
+            font-family: "Inter", sans-serif !important;
+            font-size: 1.15rem !important;
+            font-weight: 600 !important;
+            margin-bottom: 12px !important;
+        }
+        .footer_02 .aboutWidget p {
+            color: #aaaaaa !important;
+            font-family: "Inter", sans-serif !important;
+            font-size: 0.88rem !important;
+            line-height: 1.7 !important;
+            margin-bottom: 12px !important;
+        }
+        .footer_02 .aboutWidget a {
+            color: #cd9025 !important;
+            font-family: "Inter", sans-serif !important;
+            font-size: 0.9rem !important;
+            border-color: #cd9025 !important;
+        }
+        .footer_02 .aboutWidget a:hover { color: #f0d080 !important; }
+
+        .footer_02 .widget_title {
+            font-family: "Playfair Display", serif !important;
+            color: #f0f0f0 !important;
+            font-size: 1.25rem !important;
+            font-weight: 700 !important;
+        }
+        .footer_02 .widget p {
+            color: #aaaaaa !important;
+            font-family: "Inter", sans-serif !important;
+            font-size: 0.88rem !important;
+        }
+        .footer_02 .SubsrcribeForm input[type="email"] {
+            background: #2a2a2a !important;
+            border-color: #3a3a3a !important;
+            color: #e0e0e0 !important;
+        }
+        .footer_02 .fdivider { border-color: #333 !important; }
+        .copyText {
+            font-family: "Inter", sans-serif !important;
+            color: #888 !important;
+            font-size: 0.85rem !important;
+        }
+        .footer_02 .copyMenu ul li,
+        .footer_02 .copyMenu ul li a {
+            font-family: "Inter", sans-serif !important;
+            color: #888 !important;
+            font-size: 0.85rem !important;
+        }
+        .footer_02 .copyMenu ul li a:hover { color: #c08a38 !important; }
+
+        .abSocial a {
+            background: #2a2a2a !important;
+            color: #cd9025 !important;
+        }
+        .abSocial a:hover {
+            background: #cd9025 !important;
+            color: #fff !important;
+        }
+
+        /* CTA button */
+        .qu_btn {
+            font-family: "Inter", sans-serif !important;
+            font-weight: 600 !important;
+            letter-spacing: 0.04em !important;
+            font-size: 0.88rem !important;
+        }
+
+        .workSteps{
+            margin-top: 25px;
+        }
+
+        .step-item {
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 3px solid #fff;
+        }
+
+        .step-number{
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+
+        }
+
+        .step-item p {
+            margin: 0;
+            color: #fff;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* About Section New */
+        
+  /* =========================
+   Startup Needs Section
+========================= */
+
+.startupNeedsSection {
+    padding: 60px 0;
+    background: #f5f5f5;
+}
+
+.startupNeedsBox {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 35px 30px 30px;
+    background:
+        linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.82)),
+        url("assets/images/home3/bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* =========================
+   Heading
+========================= */
+
+.startupNeedsBox .smallTitle {
+    color: #cd9025;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.startupNeedsBox h2 {
+    color: #cd9025;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.startupNeedsBox p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #333;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* =========================
+   Circle Diagram
+========================= */
+
+.circleSystem {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    margin: 25px auto 0;
+    position: relative;
+    background: conic-gradient(
+        #d9d8e2 0deg 70deg,
+        #ffffff 70deg 72deg,
+        #9d9aa3 72deg 142deg,
+        #ffffff 142deg 144deg,
+        #5f5b61 144deg 214deg,
+        #ffffff 214deg 216deg,
+        #221d20 216deg 286deg,
+        #ffffff 286deg 288deg,
+        #d6d5df 288deg 358deg,
+        #ffffff 358deg 360deg
+    );
+}
+
+.centerCircle {
+    position: absolute;
+    width: 82px;
+    height: 82px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    top: 74px;
+    left: 74px;
+    z-index: 2;
+}
+
+.circleTextSvg {
+    position: absolute;
+    inset: 0;
+    width: 230px;
+    height: 230px;
+    z-index: 5;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.circleTextSvg text {
+    fill: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    /* text-anchor: middle; */
+
+}
+
+
+
+/* Labels */
+
+.circleSystem .cItem {
+    position: absolute;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .2px;
+    z-index: 5;
+    white-space: nowrap;
+}
+
+
+/* =========================
+   Funding Bars
+========================= */
+
+.fundingBars {
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.fundBar {
+    height: 32px;
+    line-height: 32px;
+    color: #111;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    border-radius: 20px;
+}
+
+/* Different lengths like PDF */
+
+.bar1 {
+    width: 45%;
+    background: #a77a32;
+}
+
+.bar2 {
+    width: 55%;
+    background: #b7852c;
+}
+
+.bar3 {
+    width: 65%;
+    background: #cd9025;
+}
+
+.bar4 {
+    width: 75%;
+    background: #e0b15d;
+}
+
+.bar5 {
+    width: 82%;
+    background: #ecc47b;
+}
+
+.bar6 {
+    width: 90%;
+    background: #f3d8a8;
+}
+
+/* =========================
+   Bottom Labels
+========================= */
+
+.bottomLabels {
+    margin-top: 25px !important;
+}
+
+.bottomLabels .col-md-6:first-child {
+    padding-right: 2px;
+}
+
+.bottomLabels .col-md-6:last-child {
+    padding-left: 2px;
+}
+
+.bottomLabels .col-md-6 div {
+    background: #cd9025;
+    color: #111;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+
+    .startupNeedsBox {
+        padding: 25px 15px;
+    }
+
+    .startupNeedsBox h2 {
+        font-size: 22px;
+    }
+
+    .circleSystem {
+        margin-bottom: 30px;
+    }
+
+    .fundingBars {
+        padding-left: 0;
+    }
+
+    .fundBar {
+        width: 100% !important;
+        font-size: 13px;
+    }
+
+    .bottomLabels .col-md-6 {
+        margin-bottom: 8px;
+        padding: 0 15px !important;
+    }
+}
+        
+        
+        </style>
+        <!-- End Popup Contact Form CSS -->
+
+        <!-- Favicon Icon -->
+        <link rel="icon"  type="image/png" href="assets/images/shravak.png">
+        <!-- Favicon Icon -->
+    </head>
+    <body>
+        <!-- Preloader Start -->
+      <!-- <div id="popupForm" class="popup-overlay">
+  <div class="popup-content">
+<span class="close-btn" id="closePopupBtn">&times;</span>
+
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div> -->
+        <!-- Preloader End -->
+
+        <!-- Header Start -->
+  <header class="header03 isSticky">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="navbar01">
+                    <div class="logo">
+                        <a  href="index3.html"><img src="assets/images/shravak-logo.png" alt="Shravak Ventures" height="100px" width="150px"></a>
+                    </div>
+                    <nav class="mainMenu">
+                        <ul>
+                             <li class="current-menu-item">
+                                <a href="index3.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="about2.html">About</a>
+                            </li>
+                            <li>
+                                <a href="blog6.html">Blogs</a>
+                            </li>
+                            <li>
+                                <a href="investor.html">Investors</a>
+                            </li>
+                            <li>
+                                <a href="service2.html">Pages</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                       
+                    </nav>
+                    <a href="javascript:void(0);" class="menuToggler"><i class="twi-bars1"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <!-- Header End -->
+
+        <!-- Begin:: Popup Menu -->
+        <section class="sidebarMenu">
+            <div class="sidebarMenuOverlay"></div>
+            <div class="SMArea">
+                <div class="SMAHeader">
+                    <h3>
+                        <i class="twi-bars1"></i> Menu
+                    </h3>
+                    <a href="javascript:void(0);" class="SMACloser"><i class="twi-times2"></i></a>
+                </div>
+                <div class="SMABody">
+                    <ul>
+                        <li class=" current-menu-item">
+                            <a href="javascript:void(0);">Home</a>
+                            <ul class="sub-menu">
+                                <li><a href="index3.html">Home Three</a></li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="javascript:void(0);">About</a>
+                            <ul class="sub-menu">
+                                <li><a href="about1.html">About 01</a></li>
+                                <li><a href="about2.html">About 02</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="">
+                            <a href="javascript:void(0);">blogs</a>
+                            <ul class="sub-menu">
+                                <li class="">
+                                    <a href="javascript:void(0);">Blog List Views</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="blog2.html">Left Sidebar</a></li>
+                                        <li><a href="blog1.html">Right Sidebar</a></li>
+                                        <li><a href="blog3.html">Without Sidebar</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="javascript:void(0);">Blog Grid Views</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="blog5.html">Left Sidebar</a></li>
+                                        <li><a href="blog4.html">Right Sidebar</a></li>
+                                        <li><a href="blog6.html">Without Sidebar</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="single-blog.html">Blog Details</a></li>
+                            </ul>
+                        </li>     
+                        <li class="">
+                            <a href="javascript:void(0);">pages</a>
+                            <ul class="sub-menu">
+                                <li class="">
+                                    <a href="javascript:void(0);">Services</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="service1.html">Service 01</a></li>
+                                        <li><a href="service2.html">Service 02</a></li>
+                                        <li><a href="single-service.html">Service Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="team.html">Team Page</a></li>
+                                <li><a href="404.html">404 Page</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End:: Popup Menu -->
+
+        <!-- Begin:: Slider Section -->
+        <section class="slider_03">
+            <div class="rev_slider_wrapper">
+                <div id="rev_slider_3" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
+                    <ul>
+                        <li data-index="rs-3050" data-transition="random-premium" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1000"  data-thumb=""  data-rotate="0"  data-saveperformance="off"  data-title="" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                            <img src="assets/images/slider/banner1.jpg"  alt="Shravak Ventures"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="0" class="rev-slidebg" data-no-retina>
+                            <div class="tp-caption ws_nowrap"
+                                 data-x="['left']" 
+                                 data-hoffset="['0']" 
+
+                                 data-y="['top']" 
+                                 data-voffset="['110','110','110','90']" 
+
+                                 data-fontsize="['20','20','20','19']"
+                                 data-fontweight="400"
+                                 data-lineheight="['30']"
+                                 data-letterspacing="1.2"
+                                 data-width="['100%']"
+                                 data-height="['auto']"
+                                 data-whitesapce="normal"
+                                 data-color="['#ffffff']"
+
+                                 data-type="text" 
+                                 data-responsive_offset="off" 
+
+                                 data-frames='[{"delay":1500,"speed":300,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]'
+
+                                 data-textAlign="['left']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,20]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,20]"
+
+                                 >Ideas &nbsp | &nbsp Founders &nbsp | &nbsp Investors
+                            </div>
+                            <div class="tp-caption headFont ws_nowrap"
+                                 data-x="['left']" 
+                                 data-hoffset="['0']" 
+
+                                 data-y="['middle']" 
+                                 data-voffset="['8','8','-10','-20']" 
+
+                                 data-fontsize="['90','80','60','36']"
+                                 data-fontweight="['700']"
+                                 data-lineheight="['100','90','74','46']"
+                                 data-letterspacing="0"
+                                 data-width="['100%']"
+                                 data-height="['auto']"
+                                 data-whitesapce="['normal']"
+                                 data-color="['#fff']"
+
+                                 data-type="text" 
+                                 data-responsive_offset="off" 
+
+                                 data-frames='[{"delay":1800,"speed":400,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+
+                                 data-textAlign="['left']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,20]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,20]"
+
+                                 >Built for Founders <br>Who Mean Business
+                            </div>
+                            <div class="tp-caption ws_nowrap"
+                                 data-x="['left']" 
+                                 data-hoffset="['0']" 
+
+                                 data-y="['middle']" 
+                                 data-voffset="['158','158','120','100']" 
+
+                                 data-fontsize="['18','18','18','18']"
+                                 data-fontweight="['400']"
+                                 data-lineheight="['30','30','30','30']"
+                                 data-letterspacing="0"
+                                 data-width="['750','750','600','100%']"
+                                 data-height="['auto']"
+                                 data-whitesapce="['normal']"
+                                 data-color="['#d7d7d7']"
+
+                                 data-type="text" 
+                                 data-responsive_offset="off" 
+
+                                 data-frames='[{"delay":2100,"speed":500,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]'
+
+                                 data-textAlign="['left']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,20]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,20]"
+
+                                 >Keeping track of the finances is fundamental to the success of every business, small or large, but tackling the task yourself can be intimidating.
+                            </div>
+                            <div class="tp-caption tp-resizeme"
+                                 data-x="['left']" 
+                                 data-hoffset="['0']" 
+
+                                 data-y="['middle']" 
+                                 data-voffset="['266','266','230','230']" 
+
+                                 data-fontsize="['16']" 
+                                 data-fontweight="700"
+                                 data-lineheight="60"
+                                 data-width="['auto']"
+                                 data-height="['auto']"
+                                 data-whitesapce="['normal']"
+                                 data-color="['#fff']"
+
+                                 data-type="text" 
+                                 data-responsive_offset="off" 
+
+                                data-frames='[{"delay":2400,"speed":600,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"x:50px;opacity:0;","ease":"power3.inOut"}]'
+
+                                 data-textAlign="['center']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,0]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,20]"
+
+                                 ><a href="service2.html" class="qu_btn">Our Services</a>
+                            </div>
+                            <div class="tp-caption tp-resizeme anLayer"
+ 
+                                 data-frames='[{"delay":3000,"speed":800,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]'
+                             
+                                 data-type="image"
+                                 data-x="right"
+                                 data-y="bottom"
+                                 data-hoffset="['-250','0','0','0']" 
+                                 data-voffset="['-300','0','0','0']" 
+                                 data-width="['auto']"
+                                 data-height="['auto']"
+                             
+                                >
+                                
+                            </div>
+                            <div class="tp-caption tp-resizeme anLayer"
+ 
+                                 data-frames='[{"delay":3300,"speed":900,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]'
+                             
+                                 data-type="image"
+                                 data-x="right"
+                                 data-y="bottom"
+                                 data-hoffset="['-400','0','0','0']" 
+                                 data-voffset="['-310','0','0','0']" 
+                                 data-width="['auto']"
+                                 data-height="['auto']"
+                             
+                                >
+                                <!--<img src="assets/images/slider/Banner2.jpeg" alt="layer">-->
+                            </div>
+                        </li>
+                        <li data-index="rs-3051" data-transition="random-premium" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1000"  data-thumb=""  data-rotate="0"  data-saveperformance="off"  data-title="" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                           <img src="assets/images/slider/banner2.jpg" 
+                           alt="Shravak Ventures"
+                           data-bgposition="center center"
+                           data-bgfit="cover"
+                           data-bgrepeat="no-repeat"
+                           data-bgparallax="0"
+                           class="rev-slidebg"
+                           data-no-retina>
+                            <div class="tp-caption ws_nowrap"
+                                 data-x="['left']" 
+                                 data-hoffset="['0']" 
+
+                                 data-y="['top']" 
+                                 data-voffset="['110','110','110','90']" 
+
+                                 data-fontsize="['20','20','20','19']"
+                                 data-fontweight="400"
+                                 data-lineheight="['30']"
+                                 data-letterspacing="1.2"
+                                 data-width="['100%']"
+                                 data-height="['auto']"
+                                 data-whitesapce="normal"
+                                 data-color="['#ffffff']"
+
+                                 data-type="text" 
+                                 data-responsive_offset="off" 
+
+                                 data-frames='[{"delay":1500,"speed":300,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]'
+
+                                 data-textAlign="['left']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,20]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,20]"
+
+                                 >Vision &nbsp | &nbsp Execution &nbsp | &nbsp Expansion
+                            </div>
+                            <div class="tp-caption headFont ws_nowrap"
+                                 data-x="['left']" 
+                                 data-hoffset="['0']" 
+
+                                 data-y="['middle']" 
+                                 data-voffset="['8','8','-10','-20']" 
+
+                                 data-fontsize="['74','80','60','36']"
+                                 data-fontweight="['700']"
+                                 data-lineheight="['100','90','74','46']"
+                                 data-letterspacing="0"
+                                 data-width="['100%']"
+                                 data-height="['auto']"
+                                 data-whitesapce="['normal']"
+                                 data-color="['#fff']"
+
+                                 data-type="text" 
+                                 data-responsive_offset="off" 
+
+                                 data-frames='[{"delay":1800,"speed":400,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+
+                                 data-textAlign="['left']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,20]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,20]"
+
+                                 >We Don’t Just Help Startups Raise<br>We Help Them Grow.
+
+                            </div>
+                            <div class="tp-caption ws_nowrap"
+                                 data-x="['left']" 
+                                 data-hoffset="['0']" 
+
+                                 data-y="['middle']" 
+                                 data-voffset="['158','158','120','100']" 
+
+                                 data-fontsize="['18','18','18','18']"
+                                 data-fontweight="['400']"
+                                 data-lineheight="['30','30','30','30']"
+                                 data-letterspacing="0"
+                                 data-width="['750','750','600','100%']"
+                                 data-height="['auto']"
+                                 data-whitesapce="['normal']"
+                                 data-color="['#d7d7d7']"
+
+                                 data-type="text" 
+                                 data-responsive_offset="off" 
+
+                                 data-frames='[{"delay":2100,"speed":500,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]'
+
+                                 data-textAlign="['left']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,20]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,20]"
+
+                                 >Shravak Ventures supports founders with the strategy, execution, and business structure needed to build long-term, scalable companies.
+                            </div>
+                            <div class="tp-caption tp-resizeme"
+                                 data-x="['left']" 
+                                 data-hoffset="['0']" 
+
+                                 data-y="['middle']" 
+                                 data-voffset="['266','266','230','230']" 
+
+                                 data-fontsize="['16']" 
+                                 data-fontweight="700"
+                                 data-lineheight="60"
+                                 data-width="['auto']"
+                                 data-height="['auto']"
+                                 data-whitesapce="['normal']"
+                                 data-color="['#fff']"
+
+                                 data-type="text" 
+                                 data-responsive_offset="off" 
+
+                                data-frames='[{"delay":2400,"speed":600,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"x:50px;opacity:0;","ease":"power3.inOut"}]'
+
+                                 data-textAlign="['center']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,0]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,20]"
+
+                                 ><a href="service2.html" class="qu_btn">Our Services</a>
+                            </div>
+                            <div class="tp-caption tp-resizeme anLayer"
+ 
+                                 data-frames='[{"delay":3000,"speed":800,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]'
+                             
+                                 data-type="image"
+                                 data-x="right"
+                                 data-y="bottom"
+                                 data-hoffset="['-250','0','0','0']" 
+                                 data-voffset="['-300','0','0','0']" 
+                                 data-width="['auto']"
+                                 data-height="['auto']"
+                             
+                                >
+                               
+                            </div>
+                            <div class="tp-caption tp-resizeme anLayer"
+ 
+                                 data-frames='[{"delay":3300,"speed":900,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]'
+                             
+                                 data-type="image"
+                                 data-x="right"
+                                 data-y="bottom"
+                                 data-hoffset="['-400','0','0','0']" 
+                                 data-voffset="['-310','0','0','0']" 
+                                 data-width="['auto']"
+                                 data-height="['auto']"
+                             
+                                >
+                                <!--<img src="assets/images/slider/s8.png" alt="layer" width="564" height="560">-->
+                            </div>
+                        </li>
+                        <li data-index="rs-3052" data-transition="random-premium" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1000"  data-thumb=""  data-rotate="0"  data-saveperformance="off"  data-title="" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                            <img src="assets/images/slider/banner3.jpg"  alt="Shravak Ventures"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="0" class="rev-slidebg" data-no-retina>
+                            <div class="tp-caption ws_nowrap"
+                                 data-x="['left']" 
+                                 data-hoffset="['0']" 
+
+                                 data-y="['top']" 
+                                 data-voffset="['110','110','110','90']" 
+
+                                 data-fontsize="['20','20','20','19']"
+                                 data-fontweight="400"
+                                 data-lineheight="['30']"
+                                 data-letterspacing="1.2"
+                                 data-width="['100%']"
+                                 data-height="['auto']"
+                                 data-whitesapce="normal"
+                                 data-color="['#ffffff']"
+
+                                 data-type="text" 
+                                 data-responsive_offset="off" 
+
+                                 data-frames='[{"delay":1500,"speed":300,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]'
+
+                                 data-textAlign="['left']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,20]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,20]"
+
+                                 >Build &nbsp | &nbsp Scale &nbsp | &nbsp Succeed
+                            </div>
+                            <div class="tp-caption headFont ws_nowrap"
+                                 data-x="['left']" 
+                                 data-hoffset="['0']" 
+
+                                 data-y="['middle']" 
+                                 data-voffset="['8','8','-10','-20']" 
+
+                                 data-fontsize="['90','80','60','36']"
+                                 data-fontweight="['700']"
+                                 data-lineheight="['100','90','74','46']"
+                                 data-letterspacing="0"
+                                 data-width="['100%']"
+                                 data-height="['auto']"
+                                 data-whitesapce="['normal']"
+                                 data-color="['#fff']"
+
+                                 data-type="text" 
+                                 data-responsive_offset="off" 
+
+                                 data-frames='[{"delay":1800,"speed":400,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+
+                                 data-textAlign="['left']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,20]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,20]"
+
+                                 >Good Ideas Are Common. <br>Scalable Businesses Aren’t.
+                            </div>
+                            <div class="tp-caption ws_nowrap"
+                                 data-x="['left']" 
+                                 data-hoffset="['0']" 
+
+                                 data-y="['middle']" 
+                                 data-voffset="['158','158','120','100']" 
+
+                                 data-fontsize="['18','18','18','18']"
+                                 data-fontweight="['400']"
+                                 data-lineheight="['30','30','30','30']"
+                                 data-letterspacing="0"
+                                 data-width="['750','750','600','100%']"
+                                 data-height="['auto']"
+                                 data-whitesapce="['normal']"
+                                 data-color="['#d7d7d7']"
+
+                                 data-type="text" 
+                                 data-responsive_offset="off" 
+
+                                 data-frames='[{"delay":2100,"speed":500,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]'
+
+                                 data-textAlign="['left']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,20]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,20]"
+
+                                 >Keeping track of the finances is fundamental to the success of every business, small or large, but tackling the task yourself can be intimidating.
+                            </div>
+                            <div class="tp-caption tp-resizeme"
+                                 data-x="['left']" 
+                                 data-hoffset="['0']" 
+
+                                 data-y="['middle']" 
+                                 data-voffset="['266','266','230','230']" 
+
+                                 data-fontsize="['16']" 
+                                 data-fontweight="700"
+                                 data-lineheight="60"
+                                 data-width="['auto']"
+                                 data-height="['auto']"
+                                 data-whitesapce="['normal']"
+                                 data-color="['#fff']"
+
+                                 data-type="text" 
+                                 data-responsive_offset="off" 
+
+                                data-frames='[{"delay":2400,"speed":600,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"x:50px;opacity:0;","ease":"power3.inOut"}]'
+
+                                 data-textAlign="['center']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,0]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,20]"
+
+                                 ><a href="service2.html" class="qu_btn">Our Services</a>
+                            </div>
+                            <div class="tp-caption tp-resizeme anLayer"
+ 
+                                 data-frames='[{"delay":3000,"speed":800,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]'
+                             
+                                 data-type="image"
+                                 data-x="right"
+                                 data-y="bottom"
+                                 data-hoffset="['-250','0','0','0']" 
+                                 data-voffset="['-300','0','0','0']" 
+                                 data-width="['auto']"
+                                 data-height="['auto']"
+                             
+                                >
+                               
+                            </div>
+                            <div class="tp-caption tp-resizeme anLayer"
+ 
+                                 data-frames='[{"delay":3300,"speed":900,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]'
+                             
+                                 data-type="image"
+                                 data-x="right"
+                                 data-y="bottom"
+                                 data-hoffset="['-400','0','0','0']" 
+                                 data-voffset="['-310','0','0','0']" 
+                                 data-width="['auto']"
+                                 data-height="['auto']"
+                             
+                                >
+                                <!--<img src="assets/images/slider/s8.png" alt="layer" width="564" height="560">-->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End:: Slider Section -->
+
+        <!-- About Start -->
+        <!-- <section class="aboutSection03">
+  
+            <div class="container largeContainer">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="subTitle"><span class="bleft"></span>Why Choose Us</div>
+                        <h2 class="secTitle">Why Startups Choose Shravak Ventures</h2>
+                        <p class="secDesc">WHY CHOOSE US</p>
+                        <ul class="choose-list">
+                            <li>Strategic and execution-focused approach</li>
+                            <li>End-to-end startup support</li>
+                            <li>Investor and growth readiness expertise</li>
+                            <li>Cross-functional business guidance</li>
+                            <li>Strong startup ecosystem understanding</li>
+                            <li>Long-term partnership mindset</li>
+                        </ul>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="fact_01">
+                                    <h2><span class="counter" data-count="2500">2.5</span><i>k</i></h2>
+                                    <p>Successfull Projects</p>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="fact_01">
+                                    <h2><span class="counter" data-count="95">95</span><i>%</i></h2>
+                                    <p>Happy Customers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="absThumb">
+                            <img src="assets/images/home3/Stiker.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- About End -->
+
+        <!-- About Start New -->
+                <section class="startupNeedsSection">
+                    <div class="container largeContainer">
+                        <div class="startupNeedsBox">
+                            <div class="text-center">
+                                <div class="smallTitle">ABOUT US</div>
+                                <h2>Everything Your Startup Needs, Under One Roof</h2>
+                                <p>
+                                    Shravak Ventures supports startups across fundraising, strategy, branding, operations, financial planning, and growth execution. We help founders build businesses that are not only fundable, but truly scalable.
+                                </p>
+                            </div>
+
+                            <div class="row align-items-center mt-4">
+                                <div class="col-lg-5">
+                                    <div class="circleSystem">
+                                        <div class="centerCircle"></div>
+                                        
+                                        <svg class="circleTextSvg" viewBox="0 0 230 230">
+                                            <defs>
+                                                <path id="circleTextPath" d="M 115,115 m -82,0 a 82,82 0 1,1 164,0 a 82,82 0 1,1 -164,0"/>
+                                            </defs>
+                                            
+                                            <text>
+                                                <textPath href="#circleTextPath" startOffset="8%">Taxation</textPath>
+                                            </text>
+                                        <text>
+                                            <textPath href="#circleTextPath" startOffset="27%">Marketing</textPath>
+                                        </text>
+                                        <text>
+                                            <textPath href="#circleTextPath" startOffset="46%">Accounting</textPath>
+                                        </text>
+                                        <text>
+                                            <textPath href="#circleTextPath" startOffset="70%">Admin</textPath>
+                                        </text>
+                                        <text>
+                                            <textPath href="#circleTextPath" startOffset="84%">Operations</textPath>
+                                        </text>
+                                    </svg>
+                                </div>
+                                </div>
+
+                                <div class="col-lg-7">
+                                    <div class="fundingBars">
+                                        <div class="fundBar bar1">Bootstrap</div>
+                                        <div class="fundBar bar2">Pre-Seed Funding</div>
+                                        <div class="fundBar bar3">Seed Funding</div>
+                                        <div class="fundBar bar4">Series A Funding</div>
+                                        <div class="fundBar bar5">Series B Funding</div>
+                                        <div class="fundBar bar6">Series C and Beyond</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-4 bottomLabels">
+                                <div class="col-md-6">
+                                    <div>360° Business Support System</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div>Startup Stages Supported</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+         <!-- About End New -->
+
+        <!-- Services Start -->
+        <section class="serviceSection03">
+            <div class="marqueeText runRight stokeText"><h2>Finance Consultant.</h2></div>
+            <div class="container largeContainer">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="subTitle"><span class="bleft"></span>Our Services<span class="bright"></span></div>
+                        <h2 class="secTitle">Customers Services</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon_box_09 text-center">
+                            <h2>01</h2>
+                            <div class="ib_box"><i class=" icon-local_1"></i></div>
+                            <div class="srThumb"><img src="assets/images/home3/s1.jpg" alt=""></div>
+                            <h3><a href="single-service.html">Startup – Investor Matchmaking</a></h3>
+                            <p>Strategic connections with investors aligned to your stage, sector, and growth vision.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon_box_09 text-center">
+                            <h2>02</h2>
+                            <div class="ib_box"><i class="icon-local_3-1"></i></div>
+                            <div class="srThumb"><img src="assets/images/home3/s2.jpg" alt=""></div>
+                            <h3><a href="single-service.html">Pitch & Investor Readiness</a></h3>
+                            <p>Helping startups prepare compelling investor communication, positioning, and fundraising strategy.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon_box_09 text-center">
+                            <h2>03</h2>
+                            <div class="ib_box"><i class="icon-local_1-1"></i></div>
+                            <div class="srThumb"><img src="assets/images/home3/s3.jpg" alt=""></div>
+                            <h3><a href="single-service.html">Valuation & Financial Modeling</a></h3>
+                            <p>Structured financial planning, projections, valuation support, and investor-ready financial models.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon_box_09 text-center">
+                            <h2>04</h2>
+                            <div class="ib_box"><i class=" icon-local_1"></i></div>
+                            <div class="srThumb"><img src="assets/images/home3/s4.jpg" alt=""></div>
+                            <h3><a href="single-service.html">CXO & Strategic Advisory</a></h3>
+                            <p>Access experienced leadership and strategic guidance across finance, marketing, operations, technology, and growth.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon_box_09 text-center">
+                            <h2>05</h2>
+                            <div class="ib_box"><i class="icon-local_3-1"></i></div>
+                            <div class="srThumb"><img src="assets/images/home3/s5.jpg" alt=""></div>
+                            <h3><a href="single-service.html">Startup Support Services</a></h3>
+                            <p>End-to-end support including marketing & branding, company setup, digital presence, legal support, GTM strategy, and operations.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon_box_09 text-center">
+                            <h2>06</h2>
+                            <div class="ib_box"><i class="icon-local_1-1"></i></div>
+                            <div class="srThumb"><img src="assets/images/home3/s6.jpg" alt=""></div>
+                            <h3><a href="single-service.html">Government Grant Support</a></h3>
+                            <p>Helping startups identify and apply for relevant non-dilutive funding opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="secDesc">We help take your small business to the next level. Don’t hesitate to contact us.</p>
+                        <h4>30 Minutes Free Consultation</h4>
+                        <div class="clearfix"></div>
+                        <a class="qu_btn" href="contact.html">Send Request</a>
+                    </div>
+                </div> -->
+            </div>
+            <!-- <div class="marqueeText btMr runLeft"><h2>Finance Consultant.</h2></div> -->
+        </section>
+        <!-- Services End -->
+
+        <!-- Investor Section Start -->
+        <section class="investorHomeSection" style="padding: 80px 0; background: #f9f9f9;">
+            <style>
+                /* Testimonial */
+                .inv-testimonial-section { width: 100%; padding: 40px 20px; text-align: center; }
+                .inv-testimonial-section h2 { color: #c08a38; margin-bottom: 30px; font-size: 28px; }
+                .inv-avatar-container { display: flex; justify-content: center; gap: 15px; margin: 30px 0; flex-wrap: wrap; }
+                .inv-avatar { width: 60px; height: 60px; border-radius: 50%; overflow: hidden; cursor: pointer; border: 3px solid transparent; transition: all 0.4s ease; }
+                .inv-avatar img { width: 100%; height: 100%; object-fit: cover; }
+                .inv-avatar.active { border: 4px solid #c08a38; transform: scale(1.2); }
+                .inv-flag { width: 50px; height: 30px; margin: 20px auto; border-radius: 5px; overflow: hidden; }
+                .inv-flag img { width: 100%; height: 100%; object-fit: cover; }
+                .inv-name { font-weight: bold; font-size: 24px; color: #333; margin-top: 10px; }
+                .inv-text { font-size: 20px; color: #666; max-width: 700px; margin: 20px auto; line-height: 1.8; transition: opacity 0.4s ease; }
+
+                /* Card Carousel */
+                .inv-carousel-section { width: 100%; padding: 60px 0 80px; background: transparent; }
+                .inv-carousel-section h2 { color: #c08a38; margin-bottom: 40px; font-size: 28px; text-align: center; }
+                .inv-arc-container {
+                    position: relative; width: 100%; height: 400px;
+                    display: flex; justify-content: center; align-items: center;
+                    perspective: 1200px; overflow: hidden;
+                }
+                .inv-arc-container::before, .inv-arc-container::after {
+                    content: ""; position: absolute; top: 0; width: 150px; height: 100%; z-index: 5; pointer-events: none;
+                }
+                .inv-arc-container::before { left: 0; background: linear-gradient(to right, #f9f9f9, transparent); }
+                .inv-arc-container::after  { right: 0; background: linear-gradient(to left,  #f9f9f9, transparent); }
+                .inv-card {
+                    position: absolute; width: 140px; height: 220px; border-radius: 12px;
+                    cursor: pointer; transition: all 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+                    box-shadow: 0 15px 35px rgba(0,0,0,0.2); background: #fff; overflow: hidden;
+                }
+                .inv-card img { width: 100%; height: 100%; object-fit: cover; }
+                .inv-card[data-pos="0"]  { transform: translateX(0) translateY(-30px) scale(1.3); z-index: 20; }
+                .inv-card[data-pos="1"]  { transform: translateX(160px) translateY(20px) rotate(10deg); }
+                .inv-card[data-pos="2"]  { transform: translateX(300px) translateY(60px) rotate(18deg); }
+                .inv-card[data-pos="3"]  { transform: translateX(420px) translateY(110px) rotate(25deg); }
+                .inv-card[data-pos="4"]  { transform: translateX(520px) translateY(160px) rotate(30deg); }
+                .inv-card[data-pos="5"]  { transform: translateX(600px) translateY(210px) rotate(35deg); }
+                .inv-card[data-pos="6"]  { transform: translateX(660px) translateY(260px) rotate(40deg); }
+                .inv-card[data-pos="7"]  { transform: translateX(700px) translateY(310px) rotate(45deg); }
+                .inv-card[data-pos="-1"] { transform: translateX(-160px) translateY(20px) rotate(-10deg); }
+                .inv-card[data-pos="-2"] { transform: translateX(-300px) translateY(60px) rotate(-18deg); }
+                .inv-card[data-pos="-3"] { transform: translateX(-420px) translateY(110px) rotate(-25deg); }
+                .inv-card[data-pos="-4"] { transform: translateX(-520px) translateY(160px) rotate(-30deg); }
+                .inv-card[data-pos="-5"] { transform: translateX(-600px) translateY(210px) rotate(-35deg); }
+                .inv-card[data-pos="-6"] { transform: translateX(-660px) translateY(260px) rotate(-40deg); }
+                .inv-card[data-pos="-7"] { transform: translateX(-700px) translateY(310px) rotate(-45deg); }
+                @media (max-width: 768px) {
+                    .inv-arc-container { height: 300px; }
+                    .inv-card { width: 100px; height: 140px; }
+                    .inv-card[data-pos="-1"] { transform: translateX(-100px) translateY(15px) rotate(-12deg); }
+                    .inv-card[data-pos="1"]  { transform: translateX(100px) translateY(15px) rotate(12deg); }
+                }
+            </style>
+
+            <div class="container">
+                <!-- Testimonial Slider -->
+                <div class="inv-testimonial-section">
+                    <div class="subTitle"><span class="bleft"></span>Our Investor Network<span class="bright"></span></div>
+                    <div class="inv-avatar-container" id="invAvatars"></div>
+                    <div class="inv-testimonial">
+                        <div class="inv-flag" id="invFlag"></div>
+                        <div class="inv-name" id="invName"></div>
+                        <div class="inv-text" id="invText"></div>
+                    </div>
+                </div>
+
+                <hr style="margin: 20px 0;">
+
+                <!-- Card Carousel -->
+                <div class="inv-carousel-section">
+                    <h2>Industries We Empower</h2>
+                    <p class="secDesc text-center">
+                        Stages Served: Pre-Seed | Seed | Early Stage | Growth Stage
+                    </p>
+                    <div class="inv-arc-container" id="invCardContainer">
+                        <div class="inv-card"><img src="https://picsum.photos/id/101/300/400" alt="Inv 1"></div>
+                        <div class="inv-card"><img src="https://picsum.photos/id/102/300/400" alt="Inv 2"></div>
+                        <div class="inv-card"><img src="https://picsum.photos/id/103/300/400" alt="Inv 3"></div>
+                        <div class="inv-card"><img src="https://picsum.photos/id/104/300/400" alt="Inv 4"></div>
+                        <div class="inv-card"><img src="https://picsum.photos/id/106/300/400" alt="Inv 5"></div>
+                        <div class="inv-card"><img src="https://picsum.photos/id/107/300/400" alt="Inv 6"></div>
+                        <div class="inv-card"><img src="https://picsum.photos/id/108/300/400" alt="Inv 7"></div>
+                        <div class="inv-card"><img src="https://picsum.photos/id/109/300/400" alt="Inv 8"></div>
+                        <div class="inv-card"><img src="https://picsum.photos/id/110/300/400" alt="Inv 9"></div>
+                        <div class="inv-card"><img src="https://picsum.photos/id/111/300/400" alt="Inv 10"></div>
+                        <div class="inv-card"><img src="https://picsum.photos/id/112/300/400" alt="Inv 11"></div>
+                        <div class="inv-card"><img src="https://picsum.photos/id/113/300/400" alt="Inv 12"></div>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 20px;">
+                    <a class="qu_btn" href="investor.html">View All Industries</a>
+                </div>
+            </div>
+
+            <script>
+            (function() {
+                /* --- Testimonial --- */
+                var invAvatarContainer = document.getElementById("invAvatars");
+                var invNameEl = document.getElementById("invName");
+                var invTextEl = document.getElementById("invText");
+                var invFlagEl = document.getElementById("invFlag");
+                
+                var invUsers = [], invCurrentT = 0, invTimer;
+
+                fetch("https://randomuser.me/api/?results=12")
+                    .then(function(r){ return r.json(); })
+                    .then(function(data){
+                        invUsers = data.results;
+                        invUsers.forEach(function(user, index){
+                            var div = document.createElement("div");
+                            div.classList.add("inv-avatar");
+                            div.innerHTML = '<img src="' + user.picture.medium + '">';
+                            div.onclick = function(){ invCurrentT = index; invUpdateT(); };
+                            invAvatarContainer.appendChild(div);
+                        });
+                        invUpdateT();
+                        invTimer = setInterval(function(){
+                            invCurrentT = (invCurrentT + 1) % invUsers.length;
+                            invUpdateT();
+                        }, 4000);
+                    });
+
+                function invUpdateT(){
+                    var avatars = document.querySelectorAll(".inv-avatar");
+                    if(!avatars.length) return;
+                    avatars.forEach(function(a){ a.classList.remove("active"); });
+                    avatars[invCurrentT].classList.add("active");
+                    var user = invUsers[invCurrentT];
+                    invNameEl.innerText = user.name.first + " " + user.name.last;
+                    invFlagEl.innerHTML = '<img src="https://flagcdn.com/w80/' + user.nat.toLowerCase() + '.png">';
+                    invTextEl.innerText = "";
+                    // invTextEl.style.opacity = 0;
+                    // setTimeout(function(){
+                    //     invTextEl.innerText = invTestimonials[invCurrentT % invTestimonials.length];
+                    //     invTextEl.style.opacity = 1;
+                    // }, 200);
+                }
+
+                /* --- Card Carousel --- */
+                var invCards = document.querySelectorAll(".inv-card");
+                var invActiveIdx = 0, invCarouselTimer;
+
+                function invUpdateCarousel(){
+                    var total = invCards.length;
+                    invCards.forEach(function(card, i){
+                        var pos = i - invActiveIdx;
+                        if (pos > total / 2) pos -= total;
+                        if (pos < -total / 2) pos += total;
+                        card.setAttribute("data-pos", pos);
+                        if (Math.abs(pos) > 7) {
+                            card.style.opacity = "0"; card.style.visibility = "hidden";
+                        } else {
+                            card.style.opacity = "1"; card.style.visibility = "visible";
+                        }
+                    });
+                }
+
+                function invStartCarousel(){
+                    invCarouselTimer = setInterval(function(){
+                        invActiveIdx = (invActiveIdx + 1) % invCards.length;
+                        invUpdateCarousel();
+                    }, 3000);
+                }
+
+                invCards.forEach(function(card, index){
+                    card.addEventListener("click", function(){
+                        invActiveIdx = index;
+                        invUpdateCarousel();
+                        clearInterval(invCarouselTimer);
+                        invStartCarousel();
+                    });
+                });
+
+                invUpdateCarousel();
+                invStartCarousel();
+            })();
+            </script>
+        </section>
+        <!-- Investor Section End -->
+
+        <!-- Company Start -->
+        <section class="companySec01">
+            <div class="container largeContainer">
+               <div class="row">
+                    <div class="col-lg-6 noPaddingRight">
+                        <img src="assets/images/home3/Graph.gif" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="comCon">
+                            <div class="subTitle"><span class="bleft"></span>Timely Service Delivery</div>
+                            <h2 class="secTitle">Unmatched value Quality service.</h2>
+                            <p class="secDesc">
+                                A typical business holds many different assets called capital, including office furniture and equipment, retail display cabinets, computers, machinery and tools, vehicles, buildings, and land.
+                            </p>
+                            <a class="qu_btn" href="contact.html">Get A Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Company End -->
+
+        <!-- Appoinment Start -->
+        <section class="appoinmentSection03">
+            <div class="container largeContainer">
+                <div class="row">
+                    <div class="col-xl-7">
+                        <div class="appointment_form">
+                            <p>Get an Quick Information</p>
+                            <h3>Request An Appointment</h3>
+                            <form action="#" method="post" class="row" id="contact_form">
+                                <div class="input-field col-lg-6">
+                                    <input class="required" type="text" name="con_name" placeholder="Your Name">
+                                </div>
+                                <div class="input-field col-lg-6">
+                                    <input class="required" type="email" name="con_email" placeholder="Email Address">
+                                </div>
+                                <div class="input-field icRight col-lg-12">
+                                    <select class="required" name="con_subject">
+                                        <option selected="selected">Choose Services</option>
+                                        <option>30 Min Free Consultation</option>
+                                        <option>Startup Consultant</option>
+                                        <option>Business Consultant</option>
+                                        <option>Financial Advices</option>
+                                        <option>Business Growth</option>
+                                    </select>
+                                </div>
+                                <div class="input-field col-lg-6">
+                                    <i class="twi-calendar2"></i>
+                                    <input class="required" type="text" name="con_date" class="date-picker" placeholder="Date of Visit">
+                                </div>
+                                <div class="input-field col-lg-6">
+                                    <i class="twi-clock2"></i>
+                                    <input class="required" type="text" name="con_time" class="time-picker" placeholder="Time of Visit">
+                                </div>
+                                <div class="input-field col-lg-12">
+                                    <textarea class="required" name="con_message" placeholder="Describe Your Property Info...."></textarea>
+                                </div>
+                                <div class="input-field col-lg-12">
+                                    <button type="submit" class="qu_btn">Submit Request</button>
+                                    <div class="con_message"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xl-5">
+                        <div class="reviewArea">
+                            <h2 class="secTitle">How we Work</h2>
+
+                            <div class="step-item">
+                                <span class="step-number">step 1</span>
+                                <p>Understand your business, goals, and current stage.</p>
+                            </div>
+
+                            <div class="step-item">
+                                <span class="step-number">step 2</span>
+                                <p>Identify gaps across funding, strategy, operations, and positioning.</p>
+                            </div>
+
+                            <div class="step-item">
+                                <span class="step-number">step 3</span>
+                                <p> Strengthen your business through structured support and execution.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Appoinment End -->
+
+        <!-- Team Start -->
+        <section class="teamSection02">
+            <div class="container largeContainer">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                    <div class="subTitle"><span class="bleft"></span><h1>Executive Team</div></h1></div><span class="bright"></span></div>
+                    <div class="col-lg-12 width="1920" height="905"text-center"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Team End -->
+
+        <!-- Call To Action Start -->
+        <section class="ctaSection">
+            <div class="container largeContainer">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="ctaText">
+                            <i class="twi-exclamation-triangle2"></i>If You Want To Get A Personal Consultant, No Worry!
+                            <a href="contact.html">Get A Consultant<i class="twi-arrow-right1"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-5 text-right">
+                        <a class="qu_btn" href="contact.html">Request For Services</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Call To Action End -->
+
+        <!-- Why Choose Start -->
+        <section class="chooseSection03">
+            <div class="container largeContainer">
+                <div class="row">
+                    <div class="col-xl-6 pdAcc">
+                        <div class="subTitle"><span class="bleft"></span>Founder & Investor Insights</div>
+                        <h2 class="secTitle">What Strong Startups and Smart Investors Usually Look For</h2>
+                        <div class="accordion quAccordion" id="quAccordion01">
+                            <div class="card">
+                                <div class="card-header" id="ma_ac_01">
+                                    <h2 class="mb-0">
+                                        <button type="button" data-toggle="collapse" data-target="#ma_collapes_01" data-aria-expanded="true" data-aria-controls="ma_collapes_01">
+                                            <span></span>
+                                            Strong Businesses Solve Clear Problems
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="ma_collapes_01" class="collapse show" aria-labelledby="ma_ac_01" data-parent="#quAccordion01">
+                                    <div class="card-body">
+                                        Investors are more likely to back startups that address real market gaps with clarity, focus, and scalable solutions - not just trends or ideas
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="ma_ac_02">
+                                    <h2 class="mb-0">
+                                        <button class="collapsed" type="button" data-toggle="collapse" data-target="#ma_collapes_02" data-aria-expanded="false" data-aria-controls="ma_collapes_02">
+                                            <span></span>
+                                            Execution Matters More Than Ideas
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="ma_collapes_02" class="collapse" aria-labelledby="ma_ac_02" data-parent="#quAccordion01">
+                                    <div class="card-body">
+                                        A great idea without execution rarely succeeds. Founders who can build systems, move consistently, and adapt quickly create stronger long-term businesses
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="ma_ac_03">
+                                    <h2 class="mb-0">
+                                        <button class="collapsed" type="button" data-toggle="collapse" data-target="#ma_collapes_03" data-aria-expanded="false" data-aria-controls="ma_collapes_03">
+                                            <span></span>
+                                            Investors Back Clarity & Conviction
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="ma_collapes_03" class="collapse" aria-labelledby="ma_ac_03" data-parent="#quAccordion01">
+                                    <div class="card-body">
+                                        Clear communication, financial understanding, market awareness, and strategic direction often influence investor confidence more than presentations alone
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="ma_ac_04">
+                                    <h2 class="mb-0">
+                                        <button class="collapsed" type="button" data-toggle="collapse" data-target="#ma_collapes_04" data-aria-expanded="false" data-aria-controls="ma_collapes_04">
+                                            <span></span>
+                                            Sustainable Growth Beats Fast Growth
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="ma_collapes_04" class="collapse" aria-labelledby="ma_ac_04" data-parent="#quAccordion01">
+                                    <div class="card-body">
+                                        Rapid scaling without operational structure can create instability. The strongest startups grow with systems, discipline, and long-term planning
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="chooseSlider owl-carousel">
+                            <div class="chsItem">
+                                <img src="assets/images/home3/4.png" alt="">
+                                <p>Where spotless cleaning comes to your door, No One Can Do This</p>
+                            </div>
+
+                            <div class="chsItem">
+                                <img src="assets/images/home3/201.png" alt="">
+                                <p>Smart investors don’t just invest in markets. They invest in disciplined founders</p>
+                            </div>
+
+                            <div class="chsItem">
+                                <img src="assets/images/home3/202.png" alt="">
+                                <p>⁠⁠Scaling starts when founders stop doing everything themselves</p>
+                            </div>
+
+                            <div class="chsItem">
+                                <img src="assets/images/home3/203.png" alt="">
+                                <p>⁠⁠⁠Investors back conviction when it’s supported by execution</p>
+                            </div>
+
+                            <div class="chsItem">
+                                <img src="assets/images/home3/204.png" alt="">
+                                <p>⁠Pitch decks raise attention. Strong businesses raise capital.</p>
+                            </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Choose End -->
+
+        <!-- Portfolio Start -->
+        <!-- <section class="portfolioSection03">
+            <div class="container largeContainer">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 noPadding">
+                        <div class="folioSlider02 owl-carousel">
+                            <div class="folioItem03">
+                                <div class="flThumb">
+                                    <img src="assets/images/folio/9.jpg" alt="">
+                                    <a href="single-folio.html">+</a>
+                                </div>
+                                <div class="folioContent">
+                                    <h3><a href="single-folio.html">Growth Instruction</a></h3>
+                                    <a class="cat" href="folio1.html">Business</a>
+                                </div>
+                            </div>
+                            <div class="folioItem03">
+                                <div class="flThumb">
+                                    <img src="assets/images/folio/10.jpg" alt="">
+                                    <a href="single-folio.html">+</a>
+                                </div>
+                                <div class="folioContent">
+                                    <h3><a href="single-folio.html">Business Managment</a></h3>
+                                    <a class="cat" href="folio1.html">Consultancy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-8">
+                        <div class="fThumb">
+                            <img src="assets/images/home3/1.jpg" alt="">
+                            <a href="folio1.html">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- Portfolio End -->
+
+        <!-- Blog Start -->
+        <!--<section class="blogSectiont03">-->
+        <!--    <div class="container largeContainer">-->
+        <!--        <div class="row">-->
+        <!--            <div class="col-lg-12 text-center">-->
+        <!--                <div class="subTitle"><span class="bleft"></span>News<span class="bright"></span></div>-->
+        <!--                <h2 class="secTitle">Latest Posts</h2>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        <div class="row">-->
+        <!--            <div class="col-lg-4 col-md-6">-->
+        <!--                <div class="blogItem03">-->
+        <!--                    <div class="blogContent">-->
+        <!--                        <div class="bmeta">-->
+        <!--                            <span><i class="twi-folder2"></i><a href="blog1.html">Develop</a></span>|<span><i class="twi-user2"></i><a href="blog1.html">David Smith</a></span>-->
+        <!--                        </div>-->
+        <!--                        <h3><a href="single-blog.html">Accounting departments are usually responsible</a></h3>-->
+        <!--                    </div>-->
+        <!--                    <div class="blogThumb">-->
+        <!--                        <img src="assets/images/blog/3.jpg" alt="">-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="col-lg-4 col-md-6">-->
+        <!--                <div class="blogItem03 bborder">-->
+        <!--                    <div class="blogThumb">-->
+        <!--                        <img src="assets/images/blog/4.jpg" alt="">-->
+        <!--                    </div>-->
+        <!--                    <div class="blogContent">-->
+        <!--                        <div class="bmeta">-->
+        <!--                            <span><i class="twi-folder2"></i><a href="blog1.html">Marketing</a></span>|<span><i class="twi-user2"></i><a href="blog1.html">David Smith</a></span>-->
+        <!--                        </div>-->
+        <!--                        <h3><a href="single-blog.html">The accounting department also keeps detailed records</a></h3>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="col-lg-4 col-md-6">-->
+        <!--                <div class="blogItem03">-->
+        <!--                    <div class="blogContent">-->
+        <!--                        <div class="bmeta">-->
+        <!--                            <span><i class="twi-folder2"></i><a href="blog1.html">Develop</a></span>|<span><i class="twi-user2"></i><a href="blog1.html">David Smith</a></span>-->
+        <!--                        </div>-->
+        <!--                        <h3><a href="single-blog.html">Discovering Sydney’s See Attractions line</a></h3>-->
+        <!--                    </div>-->
+        <!--                    <div class="blogThumb">-->
+        <!--                        <img src="assets/images/blog/5.jpg" alt="">-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--</section>-->
+        <!-- Blog End -->
+
+        <!-- Footer Section -->
+        <footer class="footer_02">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="aboutWidget">
+                            <h5>Do you have questions? <br>Call or visit us.</h5>
+                            <div class="phone"><i class="twi-phone"></i>+91 0000000000</div>
+                            <p>Unit No: 2, 4th Floor, Nilkanth Park,<br>Times Square Building, Andheri - Kurla Rd,<br>A-Wing, Gamdevi, Marol, Andheri (E),<br>Mumbai, Maharashtra 400059</p>
+                            <a href="mailto:contact@shravakventures.com">contact@shravakventures.com</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="widget gallery">
+                            <h3 class="widget_title mb28">Our Location</h3>
+                            <p>Find Us Here</p>
+                            <div class="galleryShots" style="width:100%;height:230px;overflow:hidden;border-radius:6px;">
+                               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.99186633619!2d72.88114007466599!3d19.10801275096782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9596e576117%3A0xaa52cf4083af702d!2sShravak%20Ventures!5e0!3m2!1sen!2sin!4v1778909333039!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4">
+                        <div class="widget">
+                            <h3 class="widget_title">Subscribe Our Newsletter</h3>
+                            <p>We Don’t Share Your Email Address</p>
+                            <div class="SubsrcribeForm">
+                                <form class="yikes-easy-mc-form" action="#" method="post">
+                                    <input type="email" name="EMAIL" placeholder="Email Address">
+                                    <button class="yikes-easy-mc-submit-button" type="submit">Subsrcribe</button>
+                                </form>
+                            </div>
+                            <div class="abSocial">
+                                <a href="javascript:void(0);"><i class="twi-facebook-f"></i></a>
+                                <a href="javascript:void(0);"><i class="twi-twitter"></i></a>
+                                <a href="javascript:void(0);"><i class="twi-dribbble"></i></a>
+                                <a href="javascript:void(0);"><i class="twi-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"><div class="col-lg-12"><div class="fdivider"></div></div></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="copyText">© 2026 Shravak Ventures. All Rights Reserved.
+                           Designed by <a href="https://deepshitech.com/">DeepshiTech Private Limited</a>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="copyMenu">
+                            <ul>
+                                <li><a href="javascript:void(0);">Privacy</a></li>
+                                <li><a href="javascript:void(0);">Terms</a></li>
+                                <li><a href="javascript:void(0);">Contact</a></li>
+                                <li><a href="javascript:void(0);">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Section -->
+
+        <!-- Contact Side Panel -->
+        <div class="panel-overlay" id="panelOverlay"></div>
+        <div class="panel-tab" id="panelTab">Connect</div>
+        <div class="chat-popup" id="chatPopup">
+          <button class="close-popup" id="closeSidePanel">&times;</button>
+          <div class="left-content">
+            <h1>RIGHT PEOPLE<br><strong>RIGHT TIME</strong></h1>
+            <p class="desc">
+              Opportunities don't just appear – they come through the right connections.
+            </p>
+            <p class="desc">
+              One meaningful connection can completely change your business journey.
+            </p>
+          </div>
+          <div class="right-content">
+            <h3>Connect With Us</h3>
+            <form>
+              <input type="text" placeholder="Your Name" required>
+              <input type="email" placeholder="Your Email" required>
+              <input type="tel" placeholder="Contact Number" required>
+              <input type="text" placeholder="Company Name" required>
+              <input type="text" placeholder="Your Business / Idea">
+              <textarea placeholder="Your Message"></textarea>
+              <button type="submit">Get Connected</button>
+            </form>
+          </div>
+        </div>
+        <!-- Contact Side Panel -->
+
+        <!-- Bact To Top -->
+        <a href="javascript:void(0);" id="backtotop"><i class="twi-arrow-to-top1"></i></a>
+        <!-- Bact To Top -->
+
+        <!-- Start Include All JS --> 
+
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.appear.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/shuffle.min.js"></script>
+        <script src="assets/js/nice-select.js"></script>
+        <script src="assets/js/lightcase.js"></script>
+        <script src="assets/js/jquery.datetimepicker.full.min.js"></script>
+        <script src="assets/js/circle-progress.js"></script>
+        <script src="assets/js/gmaps.js"></script>
+        <script src="https://maps.google.com/maps/api/js?key=AIzaSyBJtPMZ_LWZKuHTLq5o08KSncQufIhPU3o"></script>
+
+        <!-- Slider Revolution Main Files -->
+        <script src="assets/js/jquery.themepunch.tools.min.js"></script>
+        <script src="assets/js/jquery.themepunch.revolution.min.js"></script>
+
+        <!-- Slider Revolution Extension -->    
+        <script src="assets/js/extensions/revolution.extension.actions.min.js"></script>
+        <script src="assets/js/extensions/revolution.extension.carousel.min.js"></script>
+        <script src="assets/js/extensions/revolution.extension.kenburn.min.js"></script>
+        <script src="assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+        <script src="assets/js/extensions/revolution.extension.migration.min.js"></script>
+        <script src="assets/js/extensions/revolution.extension.navigation.min.js"></script>
+        <script src="assets/js/extensions/revolution.extension.parallax.min.js"></script>
+        <script src="assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+        <script src="assets/js/extensions/revolution.extension.video.min.js"></script>
+
+        <script src="assets/js/theme.js"></script>
+        <!-- End Include All JS -->
+    <script src="assets/js/preloader.js"></script>
+<script>
+
+
+
+window.addEventListener("scroll", function () {
+    const header = document.querySelector(".header03");
+
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+
+
+
+
+
+  window.addEventListener("load", function () {
+    const popup = document.getElementById("popupForm");
+
+    // Check if already shown before
+    if (localStorage.getItem("popupShown") === "true") return;
+
+    // Detect navigation type
+    const navEntries = performance.getEntriesByType("navigation");
+    const navType = navEntries.length > 0 ? navEntries[0].type : "";
+
+    // Only show on FIRST direct load (not reload/back/navigation)
+    if (navType === "navigate") {
+      popup.classList.add("active");
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const closeBtn = document.getElementById("closePopupBtn");
+    const popup = document.getElementById("popupForm");
+
+    if (closeBtn && popup) {
+      closeBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        popup.classList.remove("active");
+        popup.style.display = "none";
+
+        // Save so it NEVER shows again
+        localStorage.setItem("popupShown", "true");
+      });
+    }
+  });
+</script>
+
+<!-- Side Panel Script -->
+<script>
+(function() {
+    const panel     = document.getElementById("chatPopup");
+    const overlay   = document.getElementById("panelOverlay");
+    const tab       = document.getElementById("panelTab");
+    const closeBtn  = document.getElementById("closeSidePanel");
+
+    function openPanel() {
+        panel.classList.add("active");
+        overlay.classList.add("active");
+        tab.classList.add("hidden");
+    }
+
+    function closePanel() {
+        panel.classList.remove("active");
+        overlay.classList.remove("active");
+        tab.classList.remove("hidden");
+    }
+
+    // Auto-open after 4 seconds on first visit
+    if (!sessionStorage.getItem("panelOpened")) {
+        setTimeout(function() {
+            openPanel();
+            sessionStorage.setItem("panelOpened", "true");
+        }, 4000);
+    }
+
+    tab.addEventListener("click", openPanel);
+    closeBtn.addEventListener("click", closePanel);
+    overlay.addEventListener("click", closePanel);
+})();
+
+
+</script>
+
+</body>
+
+<!-- Popup Contact Form HTML -->
+<div class="chat-popup" id="chatPopup">
+    <!-- CLOSE BUTTON -->
+    <span class="close-popup">&times;</span>
+
+    <!-- LEFT CONTENT -->
